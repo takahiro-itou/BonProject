@@ -1,0 +1,42 @@
+// ModCatalog.cpp: モジュールカタログ実装クラス
+//
+/////////////////////////////////////////////////////////////////////////////
+
+#include "StdAfx.h"
+#include "BonSDK.h"
+#include "ModCatalog.h"
+
+
+/////////////////////////////////////////////////////////////////////////////
+// グローバル変数
+/////////////////////////////////////////////////////////////////////////////
+
+HMODULE g_hModule = NULL;
+
+
+/////////////////////////////////////////////////////////////////////////////
+// ファイルローカル変数
+/////////////////////////////////////////////////////////////////////////////
+
+static const CModCatalogBase::MOD_CLASS_INFO f_aClassInfo[] =
+{
+	{TEXT("IHalTsTuner"), TEXT("CPtTerTuner"), TEXT("Earthsoft PT1 ISDB-T デジタルチューナ"	 )},
+	{TEXT("IHalTsTuner"), TEXT("CPtSatTuner"), TEXT("Earthsoft PT1 ISDB-S デジタルチューナ"	 )},
+	{TEXT("IHalTsTuner"), TEXT("CPtTriTuner"), TEXT("Earthsoft PT1 ISDB-T/S デジタルチューナ")}
+};
+
+
+/////////////////////////////////////////////////////////////////////////////
+// モジュールカタログ実装クラス
+/////////////////////////////////////////////////////////////////////////////
+
+PT1Driver::PT1Driver(IBonObject *pOwner)
+	: CModCatalogBase(pOwner, f_aClassInfo, sizeof(f_aClassInfo) / sizeof(*f_aClassInfo), g_hModule, TEXT("PT1ドライバ"), TEXT("拡張ツール中の人"), TEXT("http://2sen.dip.jp/dtv/"))
+{
+	// 何もしない
+}
+
+PT1Driver::~PT1Driver(void)
+{
+	// 何もしない
+}

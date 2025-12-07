@@ -1,0 +1,125 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BonBaseLib", "BonBaseLib\BonBaseLib.vcproj", "{0FF63537-E56F-40BF-92C8-3A8CA21F1254}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BonSDK", "BonSDK", "{6DBE2AF2-2F02-4266-837C-258EB75A942D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Include", "Include", "{D6740981-0274-4784-BA4C-1370D462DD4E}"
+	ProjectSection(SolutionItems) = preProject
+		BonSDK\Include\BonBaseIf.h = BonSDK\Include\BonBaseIf.h
+		BonSDK\Include\BonBaseLib.h = BonSDK\Include\BonBaseLib.h
+		BonSDK\Include\BonConfigIf.h = BonSDK\Include\BonConfigIf.h
+		BonSDK\Include\BonDebug.h = BonSDK\Include\BonDebug.h
+		BonSDK\Include\BonGlobal.h = BonSDK\Include\BonGlobal.h
+		BonSDK\Include\BonGuid.h = BonSDK\Include\BonGuid.h
+		BonSDK\Include\BonHalIf.h = BonSDK\Include\BonHalIf.h
+		BonSDK\Include\BonMacro.h = BonSDK\Include\BonMacro.h
+		BonSDK\Include\BonMediaIf.h = BonSDK\Include\BonMediaIf.h
+		BonSDK\Include\BonObject.h = BonSDK\Include\BonObject.h
+		BonSDK\Include\BonSDK.h = BonSDK\Include\BonSDK.h
+		BonSDK\Include\IoObjectIf.h = BonSDK\Include\IoObjectIf.h
+		BonSDK\Include\MediaBase.h = BonSDK\Include\MediaBase.h
+		BonSDK\Include\MediaDecoderIf.h = BonSDK\Include\MediaDecoderIf.h
+		BonSDK\Include\ModCatalogBase.h = BonSDK\Include\ModCatalogBase.h
+		BonSDK\Include\SmartThread.h = BonSDK\Include\SmartThread.h
+		BonSDK\Include\SyncObject.h = BonSDK\Include\SyncObject.h
+		BonSDK\Include\TsDataEncode.h = BonSDK\Include\TsDataEncode.h
+		BonSDK\Include\TsDescriptorIf.h = BonSDK\Include\TsDescriptorIf.h
+		BonSDK\Include\TsEpgIf.h = BonSDK\Include\TsEpgIf.h
+		BonSDK\Include\TsStreamIf.h = BonSDK\Include\TsStreamIf.h
+		BonSDK\Include\TsTableIf.h = BonSDK\Include\TsTableIf.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{E858C86E-6594-4EB4-99F6-AAD5B4D2F04A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MediaDecoder", "MediaDecoder\MediaDecoder.vcproj", "{7FBBBC8B-CEA8-405D-A65A-36207DC3C1A5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0FF63537-E56F-40BF-92C8-3A8CA21F1254} = {0FF63537-E56F-40BF-92C8-3A8CA21F1254}
+		{2BC448C0-B741-49F1-8169-45BF2B199CF6} = {2BC448C0-B741-49F1-8169-45BF2B199CF6}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Bon", "Bon\Bon.vcproj", "{B8D41A72-2D89-42A3-8929-64CFAF43EF42}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0FF63537-E56F-40BF-92C8-3A8CA21F1254} = {0FF63537-E56F-40BF-92C8-3A8CA21F1254}
+		{91D7A363-438B-4704-8BCA-E583B1BEA369} = {91D7A363-438B-4704-8BCA-E583B1BEA369}
+		{7FBBBC8B-CEA8-405D-A65A-36207DC3C1A5} = {7FBBBC8B-CEA8-405D-A65A-36207DC3C1A5}
+		{2BC448C0-B741-49F1-8169-45BF2B199CF6} = {2BC448C0-B741-49F1-8169-45BF2B199CF6}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FriioDriver", "FriioDriver\FriioDriver.vcproj", "{91D7A363-438B-4704-8BCA-E583B1BEA369}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0FF63537-E56F-40BF-92C8-3A8CA21F1254} = {0FF63537-E56F-40BF-92C8-3A8CA21F1254}
+		{2BC448C0-B741-49F1-8169-45BF2B199CF6} = {2BC448C0-B741-49F1-8169-45BF2B199CF6}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BcasDriver", "BcasDriver\BcasDriver.vcproj", "{0746BCA8-DD47-4A07-9ED6-C81596441DD5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2BC448C0-B741-49F1-8169-45BF2B199CF6} = {2BC448C0-B741-49F1-8169-45BF2B199CF6}
+		{0FF63537-E56F-40BF-92C8-3A8CA21F1254} = {0FF63537-E56F-40BF-92C8-3A8CA21F1254}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BonCoreEngine", "BonCoreEngine\BonCoreEngine.vcproj", "{2BC448C0-B741-49F1-8169-45BF2B199CF6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0FF63537-E56F-40BF-92C8-3A8CA21F1254} = {0FF63537-E56F-40BF-92C8-3A8CA21F1254}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PT1Driver", "PT1Driver\PT1Driver.vcproj", "{BCCEDC41-279D-4AE3-9CA5-B11F29B82B17}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2BC448C0-B741-49F1-8169-45BF2B199CF6} = {2BC448C0-B741-49F1-8169-45BF2B199CF6}
+		{0FF63537-E56F-40BF-92C8-3A8CA21F1254} = {0FF63537-E56F-40BF-92C8-3A8CA21F1254}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TsServer", "TsServer\TsServer.vcproj", "{E57D56D5-DFEE-4358-AE33-CB8555BD17E5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0FF63537-E56F-40BF-92C8-3A8CA21F1254} = {0FF63537-E56F-40BF-92C8-3A8CA21F1254}
+		{2BC448C0-B741-49F1-8169-45BF2B199CF6} = {2BC448C0-B741-49F1-8169-45BF2B199CF6}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FF63537-E56F-40BF-92C8-3A8CA21F1254}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0FF63537-E56F-40BF-92C8-3A8CA21F1254}.Debug|Win32.Build.0 = Debug|Win32
+		{0FF63537-E56F-40BF-92C8-3A8CA21F1254}.Release|Win32.ActiveCfg = Release|Win32
+		{0FF63537-E56F-40BF-92C8-3A8CA21F1254}.Release|Win32.Build.0 = Release|Win32
+		{7FBBBC8B-CEA8-405D-A65A-36207DC3C1A5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7FBBBC8B-CEA8-405D-A65A-36207DC3C1A5}.Debug|Win32.Build.0 = Debug|Win32
+		{7FBBBC8B-CEA8-405D-A65A-36207DC3C1A5}.Release|Win32.ActiveCfg = Release|Win32
+		{7FBBBC8B-CEA8-405D-A65A-36207DC3C1A5}.Release|Win32.Build.0 = Release|Win32
+		{B8D41A72-2D89-42A3-8929-64CFAF43EF42}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B8D41A72-2D89-42A3-8929-64CFAF43EF42}.Debug|Win32.Build.0 = Debug|Win32
+		{B8D41A72-2D89-42A3-8929-64CFAF43EF42}.Release|Win32.ActiveCfg = Release|Win32
+		{B8D41A72-2D89-42A3-8929-64CFAF43EF42}.Release|Win32.Build.0 = Release|Win32
+		{91D7A363-438B-4704-8BCA-E583B1BEA369}.Debug|Win32.ActiveCfg = Debug|Win32
+		{91D7A363-438B-4704-8BCA-E583B1BEA369}.Debug|Win32.Build.0 = Debug|Win32
+		{91D7A363-438B-4704-8BCA-E583B1BEA369}.Release|Win32.ActiveCfg = Release|Win32
+		{91D7A363-438B-4704-8BCA-E583B1BEA369}.Release|Win32.Build.0 = Release|Win32
+		{0746BCA8-DD47-4A07-9ED6-C81596441DD5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0746BCA8-DD47-4A07-9ED6-C81596441DD5}.Debug|Win32.Build.0 = Debug|Win32
+		{0746BCA8-DD47-4A07-9ED6-C81596441DD5}.Release|Win32.ActiveCfg = Release|Win32
+		{0746BCA8-DD47-4A07-9ED6-C81596441DD5}.Release|Win32.Build.0 = Release|Win32
+		{2BC448C0-B741-49F1-8169-45BF2B199CF6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2BC448C0-B741-49F1-8169-45BF2B199CF6}.Debug|Win32.Build.0 = Debug|Win32
+		{2BC448C0-B741-49F1-8169-45BF2B199CF6}.Release|Win32.ActiveCfg = Release|Win32
+		{2BC448C0-B741-49F1-8169-45BF2B199CF6}.Release|Win32.Build.0 = Release|Win32
+		{BCCEDC41-279D-4AE3-9CA5-B11F29B82B17}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BCCEDC41-279D-4AE3-9CA5-B11F29B82B17}.Debug|Win32.Build.0 = Debug|Win32
+		{BCCEDC41-279D-4AE3-9CA5-B11F29B82B17}.Release|Win32.ActiveCfg = Release|Win32
+		{BCCEDC41-279D-4AE3-9CA5-B11F29B82B17}.Release|Win32.Build.0 = Release|Win32
+		{E57D56D5-DFEE-4358-AE33-CB8555BD17E5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E57D56D5-DFEE-4358-AE33-CB8555BD17E5}.Debug|Win32.Build.0 = Debug|Win32
+		{E57D56D5-DFEE-4358-AE33-CB8555BD17E5}.Release|Win32.ActiveCfg = Release|Win32
+		{E57D56D5-DFEE-4358-AE33-CB8555BD17E5}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D6740981-0274-4784-BA4C-1370D462DD4E} = {6DBE2AF2-2F02-4266-837C-258EB75A942D}
+		{E858C86E-6594-4EB4-99F6-AAD5B4D2F04A} = {6DBE2AF2-2F02-4266-837C-258EB75A942D}
+	EndGlobalSection
+EndGlobal
